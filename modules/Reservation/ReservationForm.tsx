@@ -65,7 +65,7 @@ export default function ReserVationForm({restaurant_id}: Props) {
     const query_str = qs.stringify(
       {
         number_adult,
-        date_arrival: dayjs(date_arrival).format('DD/MM/YYYY'),
+        date_arrival: dayjs(date_arrival).format('MM/DD/YYYY'),
         number_child,
         restaurant_name,
         time_arrival,
