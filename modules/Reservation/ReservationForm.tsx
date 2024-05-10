@@ -96,7 +96,7 @@ export default function ReserVationForm({restaurant_id}: Props) {
                     <p>Người lớn</p>
                   </div>
                   <Select
-                    onValueChange={field.onChange}
+                    onValueChange={(value) => field.onChange(Number(value))}
                     defaultValue={field.value.toString()}
                   >
                     <FormControl>
@@ -127,7 +127,7 @@ export default function ReserVationForm({restaurant_id}: Props) {
                     <p>Trẻ em</p>
                   </div>
                   <Select
-                    onValueChange={field.onChange}
+                    onValueChange={(value) => field.onChange(Number(value))}
                     defaultValue={field.value.toString()}
                   >
                     <FormControl>

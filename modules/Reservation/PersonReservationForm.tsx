@@ -141,7 +141,7 @@ export default function PersonReservationForm({
                 name="notes"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Bio</FormLabel>
+                    <FormLabel>Ghi chú</FormLabel>
                     <FormControl>
                       <Textarea
                         placeholder="Nhập ghi chú"
