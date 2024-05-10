@@ -73,7 +73,6 @@ export default function ReserVationForm({restaurant_id}: Props) {
       { skipNull: true, skipEmptyString: true }
     );
 
-    console.log(query_str);
     router.push(`/1/reservation/${restaurant_id}?${query_str}`)
   }
   return (

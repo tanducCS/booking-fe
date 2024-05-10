@@ -69,7 +69,7 @@ export default function PersonReservationForm({
         ...values,
         number_adult: Number(number_adult),
         number_child: Number(number_child),
-        date_arrival: new Date(date_arrival),
+        date_arrival: (date_arrival as unknown as Date) ,
         time_arrival: time_arrival,
       });
     } catch (err) {
@@ -180,7 +180,7 @@ export default function PersonReservationForm({
         <p className="border-b-[1px] border-black border-solid pb-4 font-medium">{`${number_adult} người lớn, ${number_child} trẻ em`}</p>
         <p className="border-b-[1px] border-black border-solid pb-4 font-medium">{`${
           daysOfWeek[new Date(!date_arrival as unknown as string).getDay() + 1]
-        }, ngày ${date_arrival} ${time_arrival}`}</p>
+        }, ngày ${dayjs(date_arrival).format('DD/MM/YYYY')} ${time_arrival}`}</p>
       </div>
     </div>
   );
