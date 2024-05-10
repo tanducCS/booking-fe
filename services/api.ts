@@ -4,11 +4,11 @@ import { Restaurant } from "@/interfaces/restaurant";
 import { http } from "@/utils/http";
 
 export const getAllReservations = async (): Promise<Reservation[]> => {
-  return await http.get(`/reservations`, undefined, false);
+  return await http.get(`/reservations`, { cache: "no-store" }, false);
 };
 
 export const getRestaurantById = async (id: string): Promise<Restaurant> => {
-  return await http.get(`/restaurants/${id}`, undefined, false);
+  return await http.get(`/restaurants/${id}`, { cache: "no-store" }, false);
 };
 
 export const createReservation = async (
